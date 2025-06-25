@@ -2,13 +2,13 @@
 A Library Management applications. Fully functional with advance CRUD operations using Node.js, Express.js, MongoDB, Mongoose and Typescript. This project boosted my Mongoose and Typescript knowledge also MongoDB query.
 
 There is book collection. Reader can borrow one or multiple books from here with a due time.
-## Features
-### Book
+## ⚡ Features
+### 📚 Book
  - Create a book
  - Get all book by filter, sort, skip and limit
  - Update a book using bookId
  - Delete a book using bookid
-### Borrow
+### 💰 Borrow
   - **Create Borrow**: When user brrow a book with **quantity** and **dueDate** the app first check if the available quantity are available in **books** collection. If the **quantity > copies** it will throw an error with an valid message "Don't have enough copy". If available the requested quantity will deducted from the available copies. When copies become 0, the available field updated with **false**. This features implement with mongoose **static methods**
   - **Brrowed Book summery**: Retrive brrowed book summery with **totalQuantity** of borrow's book and **title,isbn**.
   Example below 👇
@@ -37,12 +37,12 @@ There is book collection. Reader can borrow one or multiple books from here with
         }
     ]
   ```
-## Mongoose Features
+## 🚀Mongoose Features
 - Validation
 - Custom validation error message
 - Static method (With Typescript interfaces)
 - Mongoose middleware
-## Error handling
+## ⛔Error handling
 Added global error handling with condition based validation error message. Each controller has try-catch block. If any error occured, the error handed over to express app with **next(error)**.
 ```
 try{
@@ -53,7 +53,7 @@ try{
 ```  
 Here **next()** is a express next function. 
 
-## API Request
+## 🌐API Request
 ### Book
 - **POST**: Post a book on route 
 ```**https://libraryapp-three-iota.vercel.app/api/book**```
@@ -126,7 +126,7 @@ Here **next()** is a express next function.
 ```
 
 
-## How to install
+## 🛠️ How to install
 #### 1. Clone Repository
 ```
 git clone git@github.com:nayemalways/LibraryManagement.git
