@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: "https://libraryapp-three-iota.vercel.app"
+    origin: "http://localhost:5173"
 }))
 app.use(helmet());
 app.use(hpp());
