@@ -1,5 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express';
 import helmet from 'helmet';
+import cors from 'cors';
 import hpp from 'hpp';
 import bookRouter from './app/router/book.router';
 import borrowRouter from './app/router/borrow.router';
@@ -7,6 +8,9 @@ import borrowRouter from './app/router/borrow.router';
 const app = express();
 
 // Middleware
+app.use(cors({
+    origin: "https://libraryapp-three-iota.vercel.app"
+}))
 app.use(helmet());
 app.use(hpp());
 app.use(express.json());
