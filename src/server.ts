@@ -6,7 +6,7 @@ import app from './app';
 // Server Engine😆
 async function main( ) {
     try {
-         mongoose.connect(DATABASE_URI as string)
+        await mongoose.connect(DATABASE_URI as string)
          .then(() => {
             console.log("Database connected");
          }).catch((e) => {
