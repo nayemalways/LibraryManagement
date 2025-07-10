@@ -6,12 +6,10 @@ import app from './app';
 // Server Engine😆
 async function main( ) {
     try {
-        await mongoose.connect(DATABASE_URI as string)
-         .then(() => {
-            console.log("Database connected");
-         }).catch((e) => {
-            console.log(e);
+         await mongoose.connect(DATABASE_URI as string, {
+            serverSelectionTimeoutMS: 5000
          });
+         console.log("✅ Database connected");
 
          app.listen(PORT, () => {
             console.log(`server started on http://localhost:${PORT}`);
