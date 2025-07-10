@@ -8,9 +8,8 @@ import borrowRouter from './app/router/borrow.router';
 const app = express();
 
 // Middleware
-app.use(cors({
-    origin: "http://localhost:5173"
-}))
+app.use(cors({origin: "http://localhost:5173"}));
+ 
 app.use(helmet());
 app.use(hpp());
 app.use(express.json());
